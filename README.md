@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 # gh-actions
 
 learn github actions in rust
-=======
-# fibbot2
-
-It will run my rust project
->>>>>>> 6d3c29a7f62dea56caf23d7498b6c7e06768c5b7
 
 ## TODO
 

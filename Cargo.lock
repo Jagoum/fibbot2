@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "fibbot2"
+name = "gh-actions"
 version = "0.1.0"
