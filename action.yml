@@ -1,11 +1,26 @@
+<<<<<<< HEAD
 name: gh-actions
 description: learn github actions in rust
+=======
+name: fibbot2
+description: It will run my rust project
+>>>>>>> 6d3c29a7f62dea56caf23d7498b6c7e06768c5b7
 author: jagoum <jagoum24@gmail.com>
 inputs:
   error:
     description: 'The error message to display, if any'
     required: false
+<<<<<<< HEAD
     default: ''
+=======
+    default: ""
+  runs:
+    using: "docker"
+    image: "ghcr.io/jagoum/lambert_w"
+    args:
+      - ${{ inputs.error }}
+
+>>>>>>> 6d3c29a7f62dea56caf23d7498b6c7e06768c5b7
   token:
     description: 'The GitHub token to use for downloading the action, defaults to workflow token'
     required: true
@@ -23,7 +38,11 @@ runs:
       run: |
         echo "action_repo=fibbot2" >> $GITHUB_ENV
         echo "action_org=jagoum" >> $GITHUB_ENV
+<<<<<<< HEAD
         echo "binary_name=gh-actions" >> $GITHUB_ENV
+=======
+        echo "binary_name=fibbot2" >> $GITHUB_ENV
+>>>>>>> 6d3c29a7f62dea56caf23d7498b6c7e06768c5b7
 
     - name: Add binary extension
       shell: bash
