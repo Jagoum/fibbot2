@@ -5,7 +5,13 @@ inputs:
   error:
     description: 'The error message to display, if any'
     required: false
-    default: ''
+    default: ""
+  runs:
+    using: "docker"
+    image: "ghcr.io/jagoum/lambert_w"
+    args:
+      - ${{ inputs.error }}
+
   token:
     description: 'The GitHub token to use for downloading the action, defaults to workflow token'
     required: true
