@@ -4,8 +4,14 @@ use std::process::exit;
 
 fn main() {
     let github_output_path = match env::var("GITHUB_OUTPUT") {
-        Ok(output) => {println!("File created successfully"); output},
-        Err(e) => {eprintln!("Error: {e}"); return;},
+        Ok(output) => {
+            println!("File created successfully");
+            output
+        }
+        Err(e) => {
+            eprintln!("Error: {e}");
+            return;
+        }
     };
 
     let args: Vec<String> = env::args().collect();
@@ -14,8 +20,12 @@ fn main() {
     if !error.is_empty() {
         eprintln!("Error: {error}");
         match write(github_output_path, format!("error={error}\n")) {
-            Ok(_) => {println!("Wrote to file")},
-            Err(_) => {eprintln!("Could write to file")},
+            Ok(_) => {
+                println!("Wrote to file")
+            }
+            Err(_) => {
+                eprintln!("Could write to file")
+            }
         };
         exit(1);
     }
